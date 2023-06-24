@@ -1,0 +1,13 @@
+# Common
+label: gitopt
+
+# Deployment 
+replaces: 3
+image:
+  repository: docker.io/kawakubo2/gitops-go-app
+  tag: 0
+imageConfig:
+  pullPolicy: IfNotPresent
+
+# Service
+service_type: LoadBalancer

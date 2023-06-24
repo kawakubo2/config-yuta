@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitopts-deployment
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.label }}
+    template:
+      metadata:
+        labels:
+          app: {{ .Values.label }}
+      spec:
+        containers:
+          - name: {{ .Chart.Name }}
+            image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+            imagePullPoly: {{ .Values.imageConfig.pullPolicy }}
+
