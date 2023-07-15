@@ -7,13 +7,13 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.label }}
-    template:
-      metadata:
-        labels:
-          app: {{ .Values.label }}
-      spec:
-        containers:
-          - name: {{ .Chart.Name }}
-            image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-            imagePullPoly: {{ .Values.imageConfig.pullPolicy }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.label }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPoly: {{ .Values.imageConfig.pullPolicy }}
 
