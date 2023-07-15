@@ -5,7 +5,7 @@ label: gitopt
 replaces: 3
 image:
   repository: docker.io/kawakubo2/gitops-go-app
-  tag: 17
+  tag: 18
 imageConfig:
   pullPolicy: IfNotPresent
 
