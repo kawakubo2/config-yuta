@@ -4,10 +4,10 @@ metadata:
   name: gitops-service
 spec:
   type: {{ .Values.service_type }}
-prots:
-- name: {{ .Chart.Name }}
-  protocol: TCP
-  port: 80
-  targetPort: 8080
-selector:
-  app: {{ .Values.label }}
+  ports:
+  - name: {{ .Chart.Name }}
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  selector:
+    app: {{ .Values.label }}
