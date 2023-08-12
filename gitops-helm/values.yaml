@@ -2,7 +2,7 @@
 label: gitops
 
 # Deployment 
-replaces: 3
+replicas: 3
 image:
   repository: docker.io/kawakubo2/gitops-go-app
   tag: 19
